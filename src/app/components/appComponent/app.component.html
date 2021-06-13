@@ -1,0 +1,49 @@
+
+<div class="list-select">
+	<div class="list-select-left">
+
+		<ul class="list-select-items">
+			<li
+				*ngFor="let item of firstListItems"
+				(click)="onSelection( item )"
+				class="list-select-item"
+				[class.list-select-item-selected]="pendingSelection[ item.id ]">
+
+				<div class="item-name">
+          {{ item.name }}
+        </div>
+
+			</li>
+		</ul>
+
+	</div>
+	<div class="list-select-controls">
+		<button (click)="moveToFirstList()"	class="list-select-control">
+			&#10503;
+		</button>
+		<button (click)="moveToSecondList()" class="list-select-control">
+			&#10502;
+		</button>
+    <button (click)="deleteSelectedItems()" class="list-select-control">
+      {{"Delete"}}
+		</button>
+    
+	</div>
+	<div class="list-select-right">
+
+		<ul class="list-select-items">
+			<li
+				*ngFor="let item of secondListItems"
+				(click)="onSelection( item )"
+				class="list-select-item list-select-item--new"
+				[class.list-select-item-selected]="pendingSelection[ item.id ]">
+
+				<div class="item-name">
+          {{ item.name }}
+        </div>
+
+			</li>
+		</ul>
+
+	</div>
+</div>

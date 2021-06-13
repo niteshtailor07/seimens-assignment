@@ -1,0 +1,51 @@
+.list-select {
+  display: flex;
+  height: 400px;
+}
+
+.list-select-left, .list-select-right {
+  flex: 0 0 auto;
+  width: 40%;
+  max-width: 300px;
+}
+
+.list-select-items {
+  border: 1px solid #ccc;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+.list-select-item {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.list-select-item-selected {
+  background-color: #bfd5ff;
+}
+
+.item-name {
+  padding: 8px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.list-select-controls {
+  justify-content: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.list-select-control {
+  font-size: 20px;
+  height: 40px;
+  margin: 10px 0;
+}
